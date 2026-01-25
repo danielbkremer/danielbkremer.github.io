@@ -1,0 +1,583 @@
+/* Daniel Kremer — v0 site
+   clean + slightly offbeat, with film-ish texture and strong typography
+*/
+
+:root{
+  --bg: #0b0d10;
+  --bg2: #0f1217;
+  --panel: rgba(255,255,255,0.06);
+  --panel2: rgba(255,255,255,0.09);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --faint: rgba(255,255,255,0.55);
+  --line: rgba(255,255,255,0.14);
+
+  --accent: #ff4d8d;     /* offbeat magenta */
+  --accent2: #2ee8c7;    /* electric mint */
+  --warn: #ffd56a;
+
+  --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --radius: 18px;
+  --shadow: 0 12px 40px rgba(0,0,0,0.45);
+  --shadow2: 0 8px 22px rgba(0,0,0,0.35);
+  --max: 1040px;
+}
+
+/* Optional: respect light mode users */
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg: #fbfbfc;
+    --bg2:#f3f4f6;
+    --panel: rgba(0,0,0,0.04);
+    --panel2: rgba(0,0,0,0.06);
+    --text: rgba(0,0,0,0.88);
+    --muted: rgba(0,0,0,0.66);
+    --faint: rgba(0,0,0,0.55);
+    --line: rgba(0,0,0,0.12);
+    --shadow: 0 14px 50px rgba(0,0,0,0.10);
+    --shadow2: 0 10px 26px rgba(0,0,0,0.10);
+  }
+}
+
+*{ box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body{
+  font-family: var(--sans);
+  color: var(--text);
+  background: radial-gradient(1200px 700px at 20% -10%, rgba(255,77,141,0.10), transparent 55%),
+              radial-gradient(900px 600px at 90% 10%, rgba(46,232,199,0.12), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg2));
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+/* film grain overlay (subtle) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='190'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='190' height='190' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+.container{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(10,12,15,0.55);
+  border-bottom: 1px solid var(--line);
+}
+@media (prefers-color-scheme: light) {
+  .topbar{ background: rgba(250,250,252,0.70); }
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
+.brand{
+  display:flex;
+  align-items:baseline;
+  gap: 12px;
+}
+.brand .name{
+  font-family: var(--serif);
+  letter-spacing: 0.3px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.brand .tag{
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--panel);
+}
+
+.navlinks{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items:center;
+  justify-content:flex-end;
+}
+.navlinks a{
+  font-size: 13px;
+  color: var(--muted);
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.navlinks a:hover{
+  text-decoration: none;
+  border-color: var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+.navlinks a[aria-current="page"]{
+  background: linear-gradient(90deg, rgba(255,77,141,0.18), rgba(46,232,199,0.14));
+  border-color: rgba(255,255,255,0.18);
+  color: var(--text);
+}
+
+.hero{
+  padding: 44px 0 26px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items: start;
+}
+@media (max-width: 880px){
+  .hero-grid{ grid-template-columns: 1fr; }
+}
+
+.h-eyebrow{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.h-title{
+  font-family: var(--serif);
+  font-size: 52px;
+  line-height: 1.05;
+  margin: 12px 0 12px;
+}
+@media (max-width: 520px){
+  .h-title{ font-size: 40px; }
+}
+.h-sub{
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 18px;
+  max-width: 62ch;
+}
+.pills{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.pill{
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.pill strong{ color: var(--text); font-weight: 650; }
+
+.card{
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel2), var(--panel));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
+  overflow: hidden;
+}
+.card-pad{
+  padding: 18px 18px;
+}
+
+.portrait{
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  display:block;
+  filter: contrast(1.02) saturate(1.03);
+}
+
+.kicker{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.kicker a{
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+}
+.kicker a:hover{
+  text-decoration:none;
+  color: var(--text);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.07);
+}
+
+.section{
+  padding: 18px 0 38px;
+}
+.section h2{
+  font-family: var(--serif);
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+.section p{
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px){
+  .grid-3{ grid-template-columns: 1fr; }
+}
+
+.item{
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 14px 14px;
+}
+.item h3{
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.item p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.hr{
+  height: 1px;
+  background: var(--line);
+  margin: 10px 0 14px;
+}
+
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.list li{ margin: 6px 0; }
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.table th, .table td{
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.table th{
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: rgba(255,255,255,0.04);
+}
+.table tr:last-child td{ border-bottom: none; }
+
+.badge{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: rgba(255,255,255,0.04);
+}
+.badge.accent{
+  border-color: rgba(255,77,141,0.35);
+  background: rgba(255,77,141,0.12);
+  color: var(--text);
+}
+
+.footer{
+  padding: 26px 0 40px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 13px;
+}
+.footer .tiny{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.callout{
+  border: 1px solid rgba(255,213,106,0.32);
+  background: rgba(255,213,106,0.12);
+  border-radius: var(--radius);
+  padding: 14px 14px;
+  color: var(--muted);
+}
+.callout strong{ color: var(--text); }
+
+/* --- Home polish: a little more color, less visual clutter --- */
+
+.page-home .hero-splash{
+  position: relative;
+  overflow: hidden;
+}
+
+.page-home .hero-splash::before{
+  content:"";
+  position:absolute;
+  inset:-200px -200px auto -200px;
+  height:520px;
+  background:
+    radial-gradient(closest-side, rgba(110,231,183,.22), transparent 70%),
+    radial-gradient(closest-side, rgba(59,130,246,.18), transparent 70%),
+    radial-gradient(closest-side, rgba(244,114,182,.14), transparent 70%);
+  filter: blur(2px);
+  pointer-events:none;
+}
+
+.page-home .hero-splash::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,0,0,.06));
+  pointer-events:none;
+}
+
+.pills-tight{ gap:10px; }
+.pills-tight .pill{
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(6px);
+}
+
+.cta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
+  text-decoration:none;
+  font-weight: 600;
+}
+
+.btn:hover{ transform: translateY(-1px); }
+
+.btn.primary{
+  border-color: rgba(59,130,246,.35);
+  background: linear-gradient(135deg, rgba(59,130,246,.22), rgba(110,231,183,.14));
+}
+
+.mini-links{
+  margin-top:14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.mini-links a{ color: inherit; text-decoration:none; }
+.mini-links a:hover{ text-decoration: underline; }
+.mini-links .dot{ margin: 0 8px; opacity: .6; }
+
+.card-pop {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.muted{ color: var(--muted); }
+.tinyhint{ color: var(--faint); font-size: 13px; }
+
+.about-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 900px;
+}
+
+@media (min-width: 900px){
+  .about-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+/* --- Filmography / tables: reduce left crowding --- */
+/* Wider cell padding creates a gutter; fixed first column width gives the eye runway. */
+.table th, .table td{
+  padding: 14px 18px;
+}
+
+.table th:first-child,
+.table td:first-child{
+  width: 128px;
+}
+
+.table td:nth-child(2){
+  padding-left: 22px;
+}
+
+/* Small screens: slightly tighter so the table still fits comfortably */
+@media (max-width: 520px){
+  .table th, .table td{ padding: 12px 14px; }
+  .table th:first-child, .table td:first-child{ width: 96px; }
+  .table td:nth-child(2){ padding-left: 16px; }
+}
+
+/* -----------------------------
+   Filmography page spacing fixes
+   ----------------------------- */
+
+/* Give the main content a touch more horizontal breathing room */
+main.section .container{
+  width: min(var(--max), calc(100% - 64px));
+}
+
+/* Increase padding inside the filmography card */
+main.section .card .card-pad{
+  padding: 26px 34px;
+}
+
+/* Pull the table in from the card edges and soften the “flush left” feeling */
+main.section .table{
+  width: calc(100% - 22px);
+  margin-left: 11px;
+}
+
+/* Give the Year column a stable runway and push titles slightly right */
+main.section .table th:first-child,
+main.section .table td:first-child{
+  width: 150px;
+}
+
+main.section .table th:nth-child(2),
+main.section .table td:nth-child(2){
+  padding-left: 28px;
+}
+
+/* Slightly more generous cell padding (helps the whole grid feel less tight) */
+main.section .table th,
+main.section .table td{
+  padding: 16px 22px;
+}
+
+/* Mobile: keep it from overflowing */
+@media (max-width: 520px){
+  main.section .container{
+    width: min(var(--max), calc(100% - 36px));
+  }
+  main.section .card .card-pad{
+    padding: 18px 18px;
+  }
+  main.section .table{
+    width: 100%;
+    margin-left: 0;
+  }
+  main.section .table th:first-child,
+  main.section .table td:first-child{
+    width: 110px;
+  }
+  main.section .table th:nth-child(2),
+  main.section .table td:nth-child(2){
+    padding-left: 18px;
+  }
+}
+
+/* Make key inline links read as links (without looking tacky) */
+.imdb-link{
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(46,232,199,0.55); /* mint underline */
+}
+
+.imdb-link:hover{
+  text-decoration-color: rgba(255,77,141,0.65); /* magenta hover */
+}
+
+/* keep the controls from expanding the card */
+.table-controls{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:nowrap;
+
+  width:100%;          /* key */
+  max-width:100%;      /* key */
+  min-width:0;         /* key */
+  overflow:hidden;     /* key: prevents “make the card wider” behavior */
+}
+
+/* allow items to shrink instead of forcing overflow */
+.table-controls .control{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;         /* key */
+}
+
+/* search takes remaining space and is allowed to shrink */
+.table-controls .control:first-child{
+  flex:1 1 0;          /* key: 0 basis helps shrink */
+  min-width:0;         /* key */
+}
+
+.table-controls input[type="search"]{
+  width:100%;
+  min-width:0;         /* key */
+}
+
+/* keep selects reasonable so they don't force width */
+.table-controls select{
+  flex:0 1 180px;      /* key: can shrink */
+  min-width:0;         /* key */
+  max-width:220px;     /* optional */
+}
+
+/* reset never wraps, never stretches */
+#resetBtn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+

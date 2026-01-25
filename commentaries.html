@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selected Commentaries & Video Essays — Daniel Kremer</title>
+  <meta name="description" content="Selected audio commentaries and video essays by Daniel Kremer across major home media labels." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* Controls */
+    .table-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 14px 0 10px;
+    }
+    .table-controls .control {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(6px);
+    }
+    .table-controls label {
+      font-size: 13px;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+    .table-controls input[type="search"],
+    .table-controls select {
+      font: inherit;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      background: #fff;
+      min-width: 220px;
+    }
+    .table-controls select { min-width: 200px; }
+    .table-controls button {
+      font: inherit;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Sortable header cues */
+    th[data-sort] {
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    th[data-sort] .sort-ind {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 12px;
+      opacity: 0.7;
+      vertical-align: middle;
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 14px 10px;
+      opacity: 0.75;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="name">Daniel Kremer</div>
+          <div class="tag">commentaries</div>
+        </div>
+        <div class="navlinks">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="commentaries.html">Selected Commentaries & Essays</a>
+          <a href="books.html">Books</a>
+          <a href="filmography.html">Filmography</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+      <h2>Selected Commentaries & Video Essays</h2>
+
+      <p>
+        Kremer has contributed audio commentaries and video essays to more than <strong>200</strong> DVD / Blu-ray releases,
+        including work for labels such as The Criterion Collection, Kino Lorber, and Arrow.
+      </p>
+
+      <p>
+        Below is a curated highlights list, not the full catalog. For a full CV, contact
+        <a href="mailto:confluencefilm@gmail.com" class="badge accent">confluencefilm@gmail.com</a>.
+      </p>
+
+      <div class="hr"></div>
+
+      <div class="card">
+        <div class="card-pad">
+          <div class="h-eyebrow">Selected work</div>
+
+          <!-- Controls -->
+          <div class="table-controls" aria-label="Table controls">
+            <div class="control">
+              <label for="q">Search</label>
+              <input id="q" type="search" placeholder="Search label, title, people…" autocomplete="off" />
+            </div>
+
+            <div class="control">
+              <label for="typeFilter">Type</label>
+              <select id="typeFilter">
+                <option value="">All</option>
+                <option value="Audio commentary">Audio commentary</option>
+                <option value="Video essay">Video essay</option>
+              </select>
+            </div>
+
+            <div class="control">
+              <label for="labelFilter">Label</label>
+              <select id="labelFilter">
+                <option value="">All labels</option>
+              </select>
+            </div>
+
+            <button id="resetBtn" type="button">Reset</button>
+          </div>
+
+          <table class="table" id="workTable" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th data-sort="label">Label <span class="sort-ind" aria-hidden="true"></span></th>
+                <th data-sort="release">Release / Film <span class="sort-ind" aria-hidden="true"></span></th>
+                <th data-sort="type">Type <span class="sort-ind" aria-hidden="true"></span></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- AUDIO COMMENTARIES -->
+              <tr>
+                <td><span class="badge">AGFA</span></td>
+                <td><strong>The Leather Boys</strong> (with Sidney Furie)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>Breaking In</strong> (with Bill Forsyth and John Sayles)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>The Milagro Beanfield War</strong> (with Chick Vennera)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>The Molly Maguires</strong> (with Nat Segaloff)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Scorpion Releasing</span></td>
+                <td><strong>Privilege</strong> (1967)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>Get Crazy</strong> (with Allan Arkush and Eli Roth)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Indicator</span></td>
+                <td><strong>Deported</strong> (1950)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>He Who Must Die</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>“Directed by Sidney J. Furie” Collector’s Set</strong> (with Sidney Furie)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Milestone Film &amp; Video</span></td>
+                <td><strong>Bushman</strong> (with Rob Nilsson)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>New York, New York</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>The Life and Death of Colonel Blimp</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>Bride of Vengeance</strong> (with David Del Valle)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>Northern Lights</strong> (with Rob Nilsson and John Hanson)</td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>The Blues Under the Skin</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Arrow Video</span></td>
+                <td><strong>Westworld</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Radiance Films</span></td>
+                <td><strong>Back to the Wall</strong></td>
+                <td>Audio commentary</td>
+              </tr>
+
+              <!-- VIDEO ESSAYS -->
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>The Great Ecstasy of Tree-Climber Otto, or How I Learned to Stop Worrying and Love Late Preminger</strong> (on <em>Hurry Sundown</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>The Brando Interregnum: The Decade of Marlon’s “Dirty Dozen” 1962-1972</strong> (on <em>Burn!</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films / Kino Lorber</span></td>
+                <td><strong>La Vie en Gris: The Anglophone Louis Malle in Seven Films</strong> (on <em>Pretty Baby</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber</span></td>
+                <td><strong>A Cute, Acute Awareness: Toward a Canadian Sensibility in Film</strong> (on <em>I’ve Heard the Mermaids Singing</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>Cinema of the Pilpul: A Talmudic View of Early Holocaust Cinema</strong> (on <em>The Pawnbroker</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>Paralyzed Segments: Suzanne Pleshette Tangled Up in Codes</strong> (on <em>A Rage to Live</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Canadian International Pictures</span></td>
+                <td><strong>The Easy Parts Await: Paul Lynch and the Canadian Continuum</strong> (on <em>The Hard Part Begins</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Indicator Films</span></td>
+                <td><strong>These Obscure Subjects of Desire: Objectified Women in the Lost Films of Frankenheimer and Lumet</strong> (on <em>Impossible Object</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Cinématographe</span></td>
+                <td><strong>Something Approaching Confrontation: A Personal Topology of Paul Schrader’s Cinema Metaphysics</strong> (on <em>Touch</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Cinématographe</span></td>
+                <td><strong>To Ensnare is To Enshrine: The Ghostly Layers of Jim McBride’s Breathless</strong> (on <em>Breathless</em> (1983))</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>All the Decisive Moments: Folk Heroes in the Cinema of Gordon Parks</strong> (on <em>Leadbelly</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Severin</span></td>
+                <td><strong>Love Left the Masquerade: Peter Medak’s Cinema of Pretenders</strong> (on <em>The Ghost of Peter Sellers</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Kino Lorber / Transmission</span></td>
+                <td><strong>Pandemonium Reflex: An Inquest Into Sidney J. Furie’s Night of the Juggler</strong> (on <em>Night of the Juggler</em>)</td>
+                <td>Video essay</td>
+              </tr>
+              <tr>
+                <td><span class="badge">Imprint Films</span></td>
+                <td><strong>A Man of Potential: Visions of Paul Wendkos, the Godard of Gidget</strong> (on <em>Guns of the Magnificent Seven</em>)</td>
+                <td>Video essay</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="emptyState" class="empty-state" style="display:none;">
+            No results match your filters.
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="tiny">© <span id="y"></span> Daniel Kremer</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    (function () {
+      const table = document.getElementById("workTable");
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      const q = document.getElementById("q");
+      const typeFilter = document.getElementById("typeFilter");
+      const labelFilter = document.getElementById("labelFilter");
+      const resetBtn = document.getElementById("resetBtn");
+      const emptyState = document.getElementById("emptyState");
+      const headerCells = Array.from(table.querySelectorAll("thead th[data-sort]"));
+
+      // Extract normalized label text (badge content) for each row
+      function rowData(tr) {
+        const tds = tr.querySelectorAll("td");
+        const label = (tds[0]?.innerText || "").trim();
+        const release = (tds[1]?.innerText || "").trim();
+        const type = (tds[2]?.innerText || "").trim();
+        const haystack = (label + " " + release + " " + type).toLowerCase();
+        return { label, release, type, haystack };
+      }
+
+      const cache = new Map();
+      rows.forEach(r => cache.set(r, rowData(r)));
+
+      // Populate label filter options
+      const labels = Array.from(new Set(rows.map(r => cache.get(r).label))).sort((a,b) => a.localeCompare(b));
+      for (const lab of labels) {
+        const opt = document.createElement("option");
+        opt.value = lab;
+        opt.textContent = lab;
+        labelFilter.appendChild(opt);
+      }
+
+      // Filtering
+      function applyFilters() {
+        const query = (q.value || "").trim().toLowerCase();
+        const typeVal = (typeFilter.value || "").trim();
+        const labelVal = (labelFilter.value || "").trim();
+
+        let visibleCount = 0;
+        for (const tr of rows) {
+          const d = cache.get(tr);
+          const okQ = !query || d.haystack.includes(query);
+          const okT = !typeVal || d.type === typeVal;
+          const okL = !labelVal || d.label === labelVal;
+
+          const show = okQ && okT && okL;
+          tr.style.display = show ? "" : "none";
+          if (show) visibleCount++;
+        }
+        emptyState.style.display = visibleCount === 0 ? "" : "none";
+      }
+
+      q.addEventListener("input", applyFilters);
+      typeFilter.addEventListener("change", applyFilters);
+      labelFilter.addEventListener("change", applyFilters);
+
+      resetBtn.addEventListener("click", () => {
+        q.value = "";
+        typeFilter.value = "";
+        labelFilter.value = "";
+        // reset sort indicators
+        sortState = { key: null, dir: 1 };
+        headerCells.forEach(th => th.querySelector(".sort-ind").textContent = "");
+        applyFilters();
+      });
+
+      // Sorting (stable, preserves current row elements)
+      let sortState = { key: null, dir: 1 }; // dir: 1 asc, -1 desc
+
+      function getSortValue(tr, key) {
+        const d = cache.get(tr);
+        return (d[key] || "").toLowerCase();
+      }
+
+      function sortBy(key) {
+        // toggle direction if same key, else reset to ascending
+        if (sortState.key === key) sortState.dir *= -1;
+        else sortState = { key, dir: 1 };
+
+        // Update header indicators
+        headerCells.forEach(th => {
+          const ind = th.querySelector(".sort-ind");
+          ind.textContent = (th.dataset.sort === sortState.key)
+            ? (sortState.dir === 1 ? "▲" : "▼")
+            : "";
+        });
+
+        // Sort all rows in DOM order (then filters will hide/show)
+        const decorated = rows.map((tr, idx) => ({
+          tr,
+          idx,
+          v: getSortValue(tr, key),
+        }));
+
+        decorated.sort((a, b) => {
+          const c = a.v.localeCompare(b.v);
+          if (c !== 0) return c * sortState.dir;
+          return a.idx - b.idx; // stable tie-break
+        });
+
+        // Re-append in new order
+        for (const item of decorated) tbody.appendChild(item.tr);
+
+        // Re-apply filters so empty state stays correct
+        applyFilters();
+      }
+
+      headerCells.forEach(th => {
+        th.addEventListener("click", () => sortBy(th.dataset.sort));
+      });
+
+      // Initial state
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
