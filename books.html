@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -6,6 +7,15 @@
   <title>Books — Daniel Kremer</title>
   <meta name="description" content="Books by Daniel Kremer: Sidney J. Furie: Life and Films; Adventures in Auteurism; and an upcoming 2026 title." />
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+  </style>
 </head>
 <body>
   <div class="topbar">
@@ -33,50 +43,56 @@
         Long-form work: criticism, biography, and a defense of the overlooked.
       </p>
 
-      <div class="hr"></div>
+```
+  <div class="hr"></div>
 
-      <div class="grid-3">
-        <div class="item">
-          <h3>Sidney J. Furie: Life and Films</h3>
-          <p><span class="badge">Published</span></p>
-          <p style="margin-top:10px;">
-            <a href="https://www.amazon.com/Sidney-J-Furie-Screen-Classics/dp/0813165962" target="_blank" rel="noopener">
-              Publisher / listing →
-            </a>
-          </p>
-        </div>
-
-        <div class="item">
-          <h3>Adventures in Auteurism</h3>
-          <p><span class="badge">Published</span></p>
-          <p style="margin-top:10px;">
-            <a href="https://stickingplacebooks.com/books/adventures-in-auteurism-a-crusade-for-the-criminally-neglected" target="_blank" rel="noopener">
-              Publisher / listing →
-            </a>
-          </p>
-        </div>
-
-        <div class="item">
-          <h3>My Lunches With Henry Jaglom: A Biographical Dialogue</h3>
-          <p><span class="badge accent">Coming March 2026</span></p>
-        </div>
-      </div>
-
-      <div class="hr"></div>
-
-      <div class="card">
-        <div class="card-pad">
-          <div class="h-eyebrow">For press & researchers</div>
-          <p style="margin-top:10px;">
-            For interview requests, background research, or expert commentary, please reach out to
-              <a href="mailto:confluencefilm@gmail.com" class="badge accent">
-                confluencefilm@gmail.com
-              </a>.
-          </p>
-        </div>
-      </div>
-
+  <div class="grid-3">
+    <div class="item">
+      <img src="assets/furie.jpg" alt="Sidney J. Furie: Life and Films book cover" class="book-cover" />
+      <h3>Sidney J. Furie: Life and Films</h3>
+      <p><span class="badge">Published</span></p>
+      <p style="margin-top:10px;">
+        <a href="https://www.amazon.com/Sidney-J-Furie-Screen-Classics/dp/0813165962" target="_blank" rel="noopener">
+          Publisher / listing →
+        </a>
+      </p>
     </div>
+
+    <div class="item">
+      <img src="assets/auteurism.jpg" alt="Adventures in Auteurism book cover" class="book-cover" />
+      <h3>Adventures in Auteurism</h3>
+      <p><span class="badge">Published</span></p>
+      <p style="margin-top:10px;">
+        <a href="https://stickingplacebooks.com/books/adventures-in-auteurism-a-crusade-for-the-criminally-neglected" target="_blank" rel="noopener">
+          Publisher / listing →
+        </a>
+      </p>
+    </div>
+
+    <div class="item">
+      <img src="assets/jaglom.png" alt="My Lunches With Henry Jaglom book cover" class="book-cover" />
+      <h3>My Lunches With Henry Jaglom: A Biographical Dialogue</h3>
+      <p><span class="badge accent">Coming March 2026</span></p>
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="card">
+    <div class="card-pad">
+      <div class="h-eyebrow">For press & researchers</div>
+      <p style="margin-top:10px;">
+        For interview requests, background research, or expert commentary, please reach out to
+          <a href="mailto:confluencefilm@gmail.com" class="badge accent">
+            confluencefilm@gmail.com
+          </a>.
+      </p>
+    </div>
+  </div>
+
+</div>
+```
+
   </main>
 
   <footer class="footer">
@@ -88,5 +104,6 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

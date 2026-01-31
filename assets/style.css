@@ -575,9 +575,5 @@ main.section .table td{
   max-width:220px;     /* optional */
 }
 
-/* reset never wraps, never stretches */
-#resetBtn{
-  flex:0 0 auto;
-  white-space:nowrap;
-}
+
 
