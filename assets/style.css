@@ -645,11 +645,14 @@ main.section .table td{
   background: rgba(0,0,0,0.06);
 }
 
-.nav-dropdown:hover .nav-dropmenu,
-.nav-dropdown:focus-within .nav-dropmenu{
+.nav-dropdown[open] .nav-dropmenu{
   display: block;
 }
 
+.nav-dropdown > summary{
+  list-style: none;
+}
 
-
-
+.nav-dropdown > summary::-webkit-details-marker{
+  display: none;
+}
