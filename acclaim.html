@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acclaim — Daniel Kremer</title>
+  <meta name="description" content="Selected critical praise and endorsements for Daniel Kremer’s work." />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* Page-specific: sectional, two-column grid of pull-quote cards */
+
+    .acclaim-header{
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    /* Two-column grid on desktop, one-column on mobile */
+    .quote-grid-2{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    @media (max-width: 880px){
+      .quote-grid-2{ grid-template-columns: 1fr; }
+    }
+
+    /* Pull-quote card styling, harmonized with .item */
+    .quote-card{
+      position: relative;
+      padding: 18px 20px;
+    }
+    .quote-card::before{
+      content: "“";
+      position: absolute;
+      top: -18px;
+      left: 14px;
+      font-family: var(--serif);
+      font-size: 96px;
+      line-height: 1;
+      color: rgba(255,255,255,0.10);
+      pointer-events: none;
+    }
+    @media (prefers-color-scheme: light){
+      .quote-card::before{ color: rgba(0,0,0,0.08); }
+    }
+
+    .quote{
+      margin: 0 0 10px;
+      font-size: 15.5px;
+      color: var(--text);
+    }
+
+    .attrib{
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .attrib strong{
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* Small screens: a little tighter */
+    @media (max-width: 520px){
+      .quote-card{ padding: 16px 16px; }
+      .quote-card::before{ top: -14px; font-size: 84px; }
+    }
+  </style>
+</head>
+
+<body class="page-acclaim">
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="name">Daniel Kremer</div>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="acclaim.html">Acclaim</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropbtn" type="button" aria-haspopup="true" aria-expanded="false">
+              Selected Works <span aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropmenu" role="menu">
+              <a href="filmography.html">Filmography</a>
+              <a href="books.html">Books</a>
+              <a href="commentaries.html">Commentaries &amp; Essays</a>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="h-eyebrow">Selected praise &amp; endorsements</div>
+        <h1 class="h-title">Acclaim</h1>
+        <p class="h-sub">
+          A curated selection of responses to Daniel Kremer’s films and critical work.
+        </p>
+      </div>
+    </section>
+
+    <!-- GENERAL ACCLAIM -->
+    <section class="section">
+      <div class="container">
+        <div class="acclaim-header">
+          <h2 style="margin:0;">General acclaim</h2>
+          <p class="tinyhint" style="margin:0;">Endorsements across films &amp; work</p>
+        </div>
+
+        <div class="quote-grid-2">
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer does not lack for ambition, persistence, bravery, and talent, and his work deserves a wider audience.”</p>
+            <p class="attrib"><strong>Michael Fox</strong>, KQED/NPR</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer is for real. He makes films right now and out of thin air. Other people try to raise money for a film and complain. Daniel raises money, makes two films, writes a book, and gives thanks. He's unstoppable...and on his way up!”</p>
+            <p class="attrib"><strong>Rob Nilsson</strong>, Sundance Grand Prize winner and Cannes Caméra d'Or winner</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“A brave, dedicated, fearlessly creative new voice in American cinema.”</p>
+            <p class="attrib"><strong>Henry Jaglom</strong>, indie film maverick</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer is the rabbi of noir.”</p>
+            <p class="attrib"><strong>Philip Kaufman</strong>, director of <em>The Right Stuff</em>, <em>The Wanderers</em>, <em>Invasion of the Body Snatchers</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer is a natural and skillful filmmaker. His films are enormously impressive and imaginative.”</p>
+            <p class="attrib"><strong>Gerald Peary</strong>, celebrated film scholar and veteran critic for <em>The Boston Globe</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer definitely has the tools and directorial firepower to speak to a broader audience. He displays a remarkable command of the film medium, of all the ways filmmakers convey meaning and emotion to the audience: lighting, composition, staging, sound, editing, and music used to powerful effect. This command is very rare to see, and it's all much harder than Kremer makes it look. There is poetry in the beauty of his filmmaking.”</p>
+            <p class="attrib"><strong>Eugene Corr</strong>, director of <em>Desert Bloom</em> and <em>Waldo Salt: A Screenwriter's Journey</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer is surely a directing talent to watch. Many sequences feature evidence of a budding master at work.”</p>
+            <p class="attrib"><strong>F.X. Feeney</strong>, film critic (<em>L.A. Weekly</em>, <em>Z Channel Magazine</em>, <em>People</em>, <em>Vanity Fair</em>)</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“His filmmaking is so confident that it's astonishing. The perfectly calibrated camera moves, the always surprisingly but ineffably right compositions, and the precision of the cutting remind me of Jacques Rivette and Paul Thomas Anderson.”</p>
+            <p class="attrib"><strong>Michael Glover Smith</strong> (director of <em>Mercury in Retrograde</em> and <em>Relative</em>), White City Cinema</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Kremer has a long history of creating thought-provoking, immensely involving films on budgets that leave you gasping for air wondering 'How can he possibly do that?'”</p>
+            <p class="attrib"><strong>Richard Propes</strong>, <em>The Independent Critic</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRUEL, USUAL, NECESSARY -->
+    <section class="section">
+      <div class="container">
+        <div class="acclaim-header">
+          <h2 style="margin:0;">Acclaim for <em>Cruel, Usual, Necessary: The Passion of Silvio Narizzano</em></h2>
+          <p class="tinyhint" style="margin:0;">Selected excerpts</p>
+        </div>
+
+        <div class="quote-grid-2">
+          <div class="item quote-card">
+            <p class="quote">“Gripping, spectacularly done, utterly convincing. I am humbled by the lyricism of Kremer's narration.”</p>
+            <p class="attrib"><strong>Patrick McGilligan</strong>, Author of <em>Alfred Hitchcock: A Life in Darkness and Light</em> and <em>George Cukor: A Double Life</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“An overwhelming documentary, with an impressive and exhilarating sense of commitment. It does a remarkable job of shedding serious, responsible light on a neglected director, through the eyes of a literate, observant, talented filmmaker who appreciates the things most others miss.”</p>
+            <p class="attrib"><strong>Nat Segaloff</strong>, Author and Film Historian, Author of <em>Hurricane Billy: The Stormy Life of William Friedkin</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“I've been plunged into an awareness of an unknown director's work numerous times in books, but I daresay this is the first I've gotten this from a documentary. I have no doubt Silvio Narizzano would be humbled by this account of his life's work and grateful to have found an interpreter with Kremer's sensitivity, empathy, and an unwillingness to flinch comparable to his own.”</p>
+            <p class="attrib"><strong>Tim Lucas</strong>, <em>Video Watchdog</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Quite extraordinary. Kremer has a gift for digging up directors who have fallen between the cracks, and his insightful video essays and documentaries leave me feeling like I have a lot of catching up to do with films and filmmakers I managed to miss. Keep an eye out for <em>Cruel, Usual, Necessary: The Passion of Silvio Narizzano</em>.”</p>
+            <p class="attrib"><strong>Alonso Duralde</strong>, <em>The Wrap</em>, MSNBC, Author of <em>Hollywood Pride</em> (TCM)</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“One of the best films of 2024.”</p>
+            <p class="attrib"><strong>Bill Ackerman</strong>, <em>The Auteurist Trap</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT'S A ZABRISKIE... -->
+    <section class="section">
+      <div class="container">
+        <div class="acclaim-header">
+          <h2 style="margin:0;">Acclaim for <em>It’s a Zabriskie, Zabriskie, Zabriskie, Zabriskie Point</em></h2>
+          <p class="tinyhint" style="margin:0;">Selected excerpts</p>
+        </div>
+
+        <div class="quote-grid-2">
+          <div class="item quote-card">
+            <p class="quote">“It’s a Zabriskie, Zabriskie, Zabriskie, Zabriskie Point is a refreshing and playful celebration of cinema and the human spirit. This is one of the most invigorating and original independent films of the year.”</p>
+            <p class="attrib"><strong>Phil Hall</strong>, <em>Cinema Crazed</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The very definition of personal cinema. Really interesting and quite unlike anything else that I could even name.”</p>
+            <p class="attrib"><strong>Allan Arkush</strong>, Emmy-winning director of <em>Rock ’n’ Roll High School</em> and <em>Get Crazy</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“An endearing, affectionate, astute, and formally arresting homage to movie love in both high and low places.”</p>
+            <p class="attrib"><strong>Gerald Peary</strong>, celebrated film scholar and veteran critic for <em>The Boston Globe</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Kremer‘s most personal film, a puzzle box that slowly reveals a hidden ache and a lifelong conversation with movies as escape. The idea of running away to the circus has never been so loaded, so real.”</p>
+            <p class="attrib"><strong>Scout Tafoya</strong>, <em>RogerEbert.com</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“An unconventional personal essay film. Kremer, in a well-thought out and on-point commentary, traces Hollywood’s lust for the desert.”</p>
+            <p class="attrib"><strong>Dennis Schwartz</strong>, film critic</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer’s free-associative film essay maps out meaning across American desert-set road movies. A deeply personal trek. Sprawling and singular, idiosyncratic and encyclopaedic.”</p>
+            <p class="attrib"><strong>Anton Bitel</strong>, <em>Projected Figures</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“There is no denying that this is another triumph for Daniel Kremer.”</p>
+            <p class="attrib"><strong>Daniel Waters</strong>, screenwriter of <em>Heathers</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERWHELM THE SKY -->
+    <section class="section">
+      <div class="container">
+        <div class="acclaim-header">
+          <h2 style="margin:0;">Acclaim for <em>Overwhelm the Sky</em></h2>
+          <p class="tinyhint" style="margin:0;">Selected excerpts</p>
+        </div>
+
+        <div class="quote-grid-2">
+          <div class="item quote-card">
+            <p class="quote">“An endlessly intriguing, breezily enigmatic yarn that hangs out in the unincorporated territory between waking and dreaming, reality and paranoia.”</p>
+            <p class="attrib"><strong>Michael Fox</strong>, KQED/NPR</p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The movie is quite a trip! It's a tantalizing puzzle; words cannot begin to describe the experience of seeing it. The black-and-white cinematography is stunning.”</p>
+            <p class="attrib"><strong>Filmmaker Magazine</strong></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The work of a young virtuoso.”</p>
+            <p class="attrib"><strong>Peter Medak</strong>, director of <em>The Ruling Class</em>, <em>The Changeling</em>, and <em>The Krays</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“One of the year's best motion pictures. Ambitious, thoughtful, and beautifully constructed, filmed in pristine, visually arresting black-and-white. Alexander Hero gives a remarkable performance. Though it runs nearly three hours, you simply won't find yourself looking at your watch.”</p>
+            <p class="attrib"><strong>Richard Propes</strong>, <em>The Independent Critic</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">★★★★ “An ambitious epic of vast scope that is a real testament to what filmmakers can achieve with only a microbudget. The film is full of twists and turns, and earns its lengthy runtime. Aaron Hollander’s striking black and white cinematography is particularly effective.”</p>
+            <p class="attrib"><strong>Hannah Sayer</strong>, <em>U.K. Film Review</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Daniel Kremer has mounted quite the ambitious and challenging film, on a minuscule budget. The black-and-white cinematography by Aaron Hollander is gorgeous and adds a classical noir atmosphere to the film, and the editing [is] seamless. Thanks to a great screenplay, impressive direction, and naturalistic performances, there is a lot to enjoy about this subdued mystery.”</p>
+            <p class="attrib"><strong>Bobby LePire</strong>, <em>Film Threat</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The filmmaking is quite meticulous, shot with the care of a perfectionist. The shots demand to be felt. Overwhelm the Sky is a neo-noir, but Daniel Kremer tinges it with something of his own, a quality that is in all of his films.”</p>
+            <p class="attrib"><strong>Theo Alexander</strong>, <em>Unsung Films</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“Highly recommended! The film runs nearly three hours, however Kremer doesn’t waste an inch of his runtime. Every single story element has a purpose, reminding me very much of Christopher Nolan’s <em>Memento</em>. Alexander Hero's performance is electric and the technical mastery on display is simply astounding.”</p>
+            <p class="attrib"><strong>Ben Cahlamer</strong>, <em>The Movie Revue</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The film showcases a filmmaker who isn’t afraid to push audiences all the while keeping a steady hand to guide them through a long, strange trip. Aside from Kremer’s keen direction, another impressive part of Overwhelm the Sky is the acting, particularly from Alexander Hero.”</p>
+            <p class="attrib"><strong>Don R. Lewis</strong>, <em>Hammer to Nail</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">(Critic's Pick) “Dress up a little (just like people did for the roadshows of the ’60s), get your program, and settle in for a unique afternoon of movie entertainment, complete with good music and conversation. Daniel Kremer certainly has a story to tell.”</p>
+            <p class="attrib"><strong>G. Allen Johnson</strong>, <em>The San Francisco Chronicle</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“A model of artistic ambition on a low budget.”</p>
+            <p class="attrib"><strong>Dennis Harvey</strong>, <em>48 Hills</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EZER KENEGDO -->
+    <section class="section">
+      <div class="container">
+        <div class="acclaim-header">
+          <h2 style="margin:0;">Acclaim for <em>Ezer Kenegdo</em></h2>
+          <p class="tinyhint" style="margin:0;">Selected excerpts</p>
+        </div>
+
+        <div class="quote-grid-2">
+          <div class="item quote-card">
+            <p class="quote">“Ezer Kenegdo is simply wonderful! Daniel Kremer surprised and delighted me with his performance. It’s a film that demands to be seen more than once.”</p>
+            <p class="attrib"><strong>Joan Micklin Silver</strong>, director of <em>Hester Street</em> and <em>Crossing Delancey</em></p>
+          </div>
+
+          <div class="item quote-card">
+            <p class="quote">“The Joseph Conrad Festival exists to give exquisite, unique works like Ezer Kenegdo a place to thrive. It's an exhilarating narrative essay on friendship and history that skillfully avoids every cliche.”</p>
+            <p class="attrib"><strong>Gregorz Jankowicz</strong>, Director of The Joseph Conrad Festival – Krakow, Poland</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="tiny">© <span id="y"></span> Daniel Kremer</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

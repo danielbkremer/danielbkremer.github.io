@@ -575,5 +575,81 @@ main.section .table td{
   max-width:220px;     /* optional */
 }
 
+/* Dropdown wrapper sits inline with the other nav items */
+.nav-dropdown{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* IMPORTANT: make the button look exactly like the nav <a> links */
+.nav-dropbtn{
+  /* kill native button styling */
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+
+  /* match link typography + alignment */
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+
+  /* match “link-like” layout */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  /* IMPORTANT: match your link padding/radius (tweak if needed) */
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  font-weight: bold;   /* MATCHES .navlinks a */
+  line-height: 1;     /* neutralize caret height inflation */
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+/* If your links have hover states, mirror them */
+.nav-dropbtn:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* Menu */
+.nav-dropmenu{
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  z-index: 50;
+
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.nav-dropmenu a{
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-dropmenu a:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+.nav-dropdown:hover .nav-dropmenu,
+.nav-dropdown:focus-within .nav-dropmenu{
+  display: block;
+}
+
+
 
 
