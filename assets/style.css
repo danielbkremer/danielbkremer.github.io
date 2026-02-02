@@ -656,3 +656,13 @@ main.section .table td{
 .nav-dropdown > summary::-webkit-details-marker{
   display: none;
 }
+
+/* Ensure dropdown text is visible inside the (white) menu */
+.nav-dropmenu{
+  color: #111;
+}
+
+.nav-dropmenu a{
+  color: #111;
+}
+
